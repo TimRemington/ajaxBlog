@@ -4,7 +4,7 @@ exports.seed = function(knex, Promise) {
     .then(function() {
       // Inserts seed entries
       return knex('blogtable').insert([
-        {id: 1, name: 'Tim', blogpost: 'I really like Star Wars and Lord of the Rings.  But I would NEVER use them for a password.'},
+        {id: 1, name: 'Tim', blogpost: 'I really like Star Wars and Lord of the Rings.  But I would NEVER use them for a password.'}
       ])
       .then(function() {
         // Moves id column (PK) auto-incrementer to correct value after inserts
