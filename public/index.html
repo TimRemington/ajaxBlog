@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css" media="screen,projection" />
+
+</head>
+
+<body style="background-color:#A9A9A9">
+  <div class="col s12 m12 l12" style="padding:10px 50px 50px 50px">
+    <h1>Welcome to the RPG blog!</h1>
+    <h3>A place to discuss some of the worlds best RPGs that are not Dungeons and Dragons!</h3>
+  </div>
+
+  <br></br>
+
+  <table id="blog-posts">
+    <thead>
+      <tr>
+        <th>RPG Title</th>
+        <th>Blog Post</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <form id="create-report" style="background-color:#F5F5F5">
+    <h3 for="name">Name</h3>
+    <input type="text" name="name" id="name"><br>
+
+    <h3 for="content">Content</h3>
+    <textarea rows="5" cols="25" name="content" id="content"></textarea><br>
+
+    <br></br>
+
+    <input type="submit" value="Submit" id="blogposted">
+  </form>
+
+</body>
+<script src="/javascripts/scripts.js" charset="utf-8"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js' charset="utf-8">
+</script>
+
+</html>

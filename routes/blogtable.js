@@ -25,7 +25,7 @@ router.get('/:id', (req, res, next) => {
 })
 // CREATE ONE record for this table
 router.post('/', (req, res, next) => {
-  knex('blogpost')
+  knex('blogtable')
     .insert({
       "name": req.body.name,
       "blogpost": req.body.blogpost
@@ -61,12 +61,12 @@ router.put('/:id', (req, res, next) => {
 })
 // DELETE ONE record for this table
 router.delete('/:id', (req, res, next) => {
-  knex('blogpost')
+  knex('blogtable')
   .where('id', req.params.id)
   .first()
   .then((row) => {
     if(!row) return next()
-    knex('blogpost')
+    knex('blogtable')
       .del()
       .where('id', req.params.id)
       .then(() => {
