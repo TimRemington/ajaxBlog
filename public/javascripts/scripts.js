@@ -62,17 +62,14 @@ function addNewBlog() {
 
     for (var i = 0; i < formElements.length; i++) {
       let inputName = formElements[i].name
+      let content = formElements[i].blogpost
       if( inputName ) {
         postData[inputName] = formElements[i].value
       }
     }
 
-    for (var i = 0; i < formElements.length; i++) {
-      let inputName = formElements[i].blogpost
-      if( inputName ) {
-        postData[inputName] = formElements[i].value
-      }
-    }
+    console.log(postData)
+
     //axios.post that data to the correct backend route
     axios.post('/blogtable', postData)
     .then((response) => {
