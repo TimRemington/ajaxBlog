@@ -68,7 +68,6 @@ function addNewBlog() {
       }
     }
 
-    console.log(postData)
 
     //axios.post that data to the correct backend route
     axios.post('/blogtable', postData)
